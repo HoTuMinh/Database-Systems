@@ -1,1 +1,1 @@
-- study chapter 1 thru 7 as an introductory course 
+- study chapter 1 thru 15 as an introductory course 
