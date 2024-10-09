@@ -46,12 +46,12 @@
   - create a new section for the `Database` course for this semester (update)
 
 > **_IRL_**
-- the database is a part of the information system within any organization
-- the IT department of a company designs and maintains an information system consisting of various computers, storage systems, application softwares, and databases
-- Design of a new application for an existing database or design of a brand new database starts off with a phase called **requirements specification and analysis**
-- These requirements are documented in detail and transformed into a **conceptual design** (we'll look at the _Entity-Relationship_ model later)
-- The design is then translated to a **logical design** that can be expressed in a data model implemented in a commercial DBMS (_Relational Data Model_)
-- The final stage is **physical design**, during which further specifications are provided for storing and accessing the database. The database design is implemented, populated with actual data, and continuously maintained to reflect the state of the miniworld
+> - _the database is a part of the information system within any organization_
+> - _the IT department of a company designs and maintains an information system consisting of various computers, storage systems, application softwares, and databases_
+> - _Design of a new application for an existing database or design of a brand new database starts off with a phase called **requirements specification and analysis**_
+> - _These requirements are documented in detail and transformed into a **conceptual design** (we'll look at the _Entity-Relationship_ model later)_
+> - _The design is then translated to a **logical design** that can be expressed in a data model implemented in a commercial DBMS (_Relational Data Model_)_
+> - _The final stage is **physical design**, during which further specifications are provided for storing and accessing the database. The database design is implemented, populated with actual data, and continuously maintained to reflect the state of the miniworld_
 
 ### Main Characteristics of database systems (vs file processing)
 
@@ -119,7 +119,7 @@
     - the **query processing and optimization** module: responsible for choosing an efficient query execution plan for each query based on the existing storage structures
 
 > **_IRL_**
-- The choice of which indexes to create and maintain is part of physical database design and tuning, which is one of the responsibilities of the DBA staff
+> _- The choice of which indexes to create and maintain is part of physical database design and tuning, which is one of the responsibilities of the DBA staff_
 
 5. **_providing backup and recovery_**
     - the **backup and recovery subsystem**: is responsible for recovery
@@ -179,3 +179,4 @@ In summary, chapter 1 contains
 
 - [ ] does an _object_ in line 108 refers to a field in a table in a database?
 - [ ] what does _semantic of the data_ means?
+- [ ] explore the career path of database systems? What skills are required? Is it a hot career path in Viet Nam?
