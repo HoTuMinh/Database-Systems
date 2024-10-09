@@ -31,11 +31,27 @@
 
 ![image](https://github.com/user-attachments/assets/16b31565-d3a8-4685-8703-8ed125c6ab55)
 
-
 ### An Example: University database
 
-- **_Defining the database_**: specify the different types of **data elements** to be stored in each record 
-- 
+- **_Defining the database_**: specify the different types of **data elements** to be stored in each record
+  - `STUDENT` record includes `Name` (string), `Student_number` (integer), `Class` (1, 2, 3, 4, 5), `Major` (`MATH`, `CS`)
+  - `COURSE` record include `Course_name`, `Course_number`, `Credit_hours`, and `Department`
+![image](https://github.com/user-attachments/assets/647b388f-9c09-47b6-9b8f-73fffebe9316)
+
+- **_Construct the database_**: store data to represent each student, course, selection, grade repost, and prerequisite as a record in the appropriate file
+- **_Manipulating tha database_**: involves querying and updating
+  - retrieve the transcript (query)
+  - list the names of the students who took the `Database` course (query)
+  - change the class of `Smith` to sophomore (update)
+  - create a new section for the `Database` course for this semester (update)
+
+> **_IRL_**
+- the database is a part of the information system within any organization
+- the IT department of a company designs and maintains an information system consisting of various computers, storage systems, application softwares, and databases
+- Design of a new application for an existing database or design of a brand new database starts off with a phase called **requirements specification and analysis**
+- These requirements are documented in detail and transformed into a **conceptual design** (we'll look at the _Entity-Relationship_ model later)
+- The design is then translated to a **logical design** that can be expressed in a data model implemented in a commercial DBMS (_Relational Data Model_)
+- The final stage is **physical design**, during which further specifications are provided for storing and accessing the database. The database design is implemented, populated with actual data, and continuously maintained to reflect the state of the miniworld
 
 
 ### Main Characteristics of database systems 
