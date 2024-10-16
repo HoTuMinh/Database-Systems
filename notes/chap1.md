@@ -76,7 +76,7 @@
 - **data model**: is a type of data abstraction used to provide this conceptual representation (easier for users to understand and use)
 - in object-oriented and object-relational databases, the abstraction process includes not only the data structure but also the operations on the data $\rightarrow$ **abstract operation**
 
-- **transaction**: an executin program or process tat includes one or more database accesses 
+- **transaction**: an execution program or process that includes one or more database accesses 
 - **online transaction processing (OLTLP)** applications: ex. when several teenagers're booking tickers for a movie
 - transaction properties
   1. **isolation**: ensures that each transaction appears to execute in isolation from other transactions 
@@ -168,6 +168,70 @@ In summary, chapter 1 contains
 - types of people who involves with a database
 - advantages and disadvantages of using the database approach 
 
+### Review questions 
+- define the following terms
+  - Data: facts that can be recorded and have meaning 
+  - Database: a collection of related data 
+  - DBMS: a collection of programs that enables users to create and maintain a database
+  - Database system: a system of multiple databases
+  - Database catalog: the place to store the database definition (meta-data)
+  - Program-data independence: is a characteristic of the database approach - when a file we want to processed changes, we only need to change the description of the file in the catalog, not the programs used to access that file 
+  - User view: the view that the user will see and use to interact with the database 
+  - DBA: Database Administrator, who is responsible for authorizing access to the database, coordinating and monitoring its use, and acquiring software and hardware resources as needed
+  - End user: people whose jobs require access to the database for querying, updating, and generating reports
+  - Canned transaction: are standard typeps of queries and updates - that have carefully programmed and tested (for most users - **Naive** or **parametric end users**)
+  - Deductive database system: provide capabilities for defining deduction rules for inferencing new information from the stored database
+  - Persistent object: objects that survuves the termination of program execution and can later be directly retreived by another C++ program 
+  - Meta-data: definitions and descriptions of the data records
+  - Transaction-processing application: applications that process transactions for multiple users smoothly  
+- What four main types of actions involve databases? Briefly discuss each.
+  - defining a database: involves specifying the data types, structures, and constraints of the data to be stored in the database
+  - constructing a database: is the process of storing the data on some storage medium that is controlled by the DBMS
+  - manipulating a database: includes functions such as querying the database to retrieve specific data, updating the database to reflect changes in the miniworld, and generating reports from the data
+  - sharing a database: allows multiple users and programs to access the database simultaneously 
+- Discuss the main characteristics of the database approach and how it differs from traditional file systems. (in the section **_Main characteristics of database systems (vs. file processing)_**
+- What are the responsibilities of the DBA and the database designers?
+  - **DBA** is responsible for authorizing access to the database, coordinating and monitoring its use, and acquiring software and hardware resources as needed. The DBA is accountable for problems such as security breaches and poor system response time.
+  - **Database Designers**: are responsible for identifying the data to be stored in the database and for choosing appropriate structures to represent and store this data. It is the responsibility of database designers to communicate with all prospective database users in order to understand their requirements and to create a design that meets these requirements
+- What are the different types of database end users? Discuss the main activities of each.
+  - **Casual end users**: occasionally acess the database. They use a sophisticated database query language to specify their requests and are typically middle- or high-level managers or
+other occasional browsers -  learn only a few facilities that they may use repeatedly
+  - **Naive** or **parametric end users**: make up a sizable portion of database end users. Their main job function revolves around constantly querying and updating the database, using standard types of queries and updates (ex. Bank tellers check account balances and post withdrawals and deposits) -  simply have to understand the user interfaces of the standard transactions designed and implemented for their use
+  - **Sophisticated end users**: people who thoroughly familiarize themselves with the facilities of the DBMS in order to implement their own applications to meet their complex requirements (ex. engineers, BA,...) - try to learn most of the DBMS facilities in order to
+achieve their complex requirements
+  - **Standalone users**: maintain personal databases by using ready-made program packages that provide easy-to-use menu-based or graphics-based interfaces (ex. user of a tax package that stores a variety of personal financial data for tax purposes) - typically become very proficient in using a specific software package
+- Discuss the capabilities that should be provided by a DBMS
+  - controlling redundancy
+  - restricting unauthorized access
+  - providing persistent storage for program objects
+  - providig storage structures and search techniques for efficient query processing
+  - providing backup and recovery
+  - providing multiple user interfaces
+  - representing complex relationships among data
+  - enforcing integrity constraints
+  - permitting inferencing and actions using rules
+- Discuss the differences between database systems and information retrieval systems
+
+| CATEGORY                               | DATABASES                                                                                                            | INFORMATION RETREIVAL (an area realted to database technology)                                                                             |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| the field in which they are often used | - manufacturing - retail  - banking - insurance - finance - health care                                              | - books - manuscripts - various forms of library-based articles                                                                            |
+| the main task                          | - processing structured and formatted data that arises in routine applications in government, business, and industry | - IR is concerned with searching for material based on key-words - problems dealing with document processing  - free form text processing  |
+
+### Exercises 
+- Identify some informal queries and update operations that you would expect to apply to the database shown in Figure 1.2.
+  - retrieve the transcript of all courses and grades of 'Smith'
+  - list the prerequisite of the 'Database' course
+- What is the difference between controlled and uncontrolled redundancy? Illustrate with examples.
+  - the DBMS approach allows the control of redundancy (in storing the same data multiple times)
+  - 
+- Specify all the relationships among the records of the database shown in Figure 1.2.
+- Give some additional views that may be needed by other user groups for the database shown in Figure 1.2.
+- Cite some examples of integrity constraints that you think can apply to the database shown in Figure 1.2.
+- Give examples of systems in which it may make sense to use traditional file processing instead of a database approach.
+- Consider Figure 1.2:
+  1. If the name of the ‘CS’ (Computer Science) Department changes to ‘CSSE’ (Computer Science and Software Engineering) Department and the corresponding prefix for the course number also changes, identify the columns in the database that would need to be updated
+  2. Can you restructure the columns in the COURSE, SECTION, and PREREQUISITE tables so that only one column will need to be updated?
+
 ### Linkies 
 
 - I read mostly from the book
@@ -175,8 +239,9 @@ In summary, chapter 1 contains
 - [reference1](https://www.dremio.com/wiki/file-processing-system/#:~:text=File%20Processing%20Systems%20offer%20direct,and%20file%2Dlevel%20data%20manipulation.) on file processing systems
 - [reference2](https://www.geeksforgeeks.org/file-processing-system-fps/) on file processing systems
 
-### questions
+### Questions
 
 - [ ] does an _object_ in line 108 refers to a field in a table in a database?
+- [ ] what is _program objects_? (pg 48 of the book)
 - [ ] what does _semantic of the data_ means?
 - [ ] explore the career path of database systems? What skills are required? Is it a hot career path in Viet Nam?
