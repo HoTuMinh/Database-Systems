@@ -5,7 +5,7 @@
   - string data types
   - date and time data types
 
-- [ ] create table
+- [X] create table
   - first, you need to download MySQL Workbench to work with a MySQL using a GUI
     - follow the [link](https://dev.mysql.com/downloads/workbench/) and download
     - ![image](./images/2.1.png)
@@ -28,7 +28,7 @@
     2. Table constraints: is declared separately, can apply constraints for one or more columns
   - you should **name the constraint** for easier debugging 
 
-- [ ] alter table structure
+- [x] alter table structure
   - to modify the table structure that already exists in the database, use the `ALTER TABLE` statement, the statement maybe used to
     - add, delete, edit columns of the table
     - add and remove constraints
@@ -51,7 +51,7 @@
 
 ### PRACTICAL EXERCISES
 
-- [ ] create database _My_Classimodels_
+- [X] create database _My_Classimodels_
 - ![image](./images/2.3.png)
 
-- [ ] after creating the 4 data tables, add foreign key cnostraints between tables as shown in the figure 
+- [x] after creating the 4 data tables, add foreign key constraints between tables as shown in the figure 
