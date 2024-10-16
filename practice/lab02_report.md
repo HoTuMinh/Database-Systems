@@ -54,4 +54,6 @@
 - [X] create database _My_Classimodels_
 - ![image](./images/2.3.png)
 
-- [x] after creating the 4 data tables, add foreign key constraints between tables as shown in the figure 
+- [x] after creating the 4 data tables, add foreign key constraints between tables as shown in the figure
+
+**_all the SQL queries are in the file_** `lab02.sql`
