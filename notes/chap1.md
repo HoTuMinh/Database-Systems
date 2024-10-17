@@ -222,15 +222,45 @@ achieve their complex requirements
   - retrieve the transcript of all courses and grades of 'Smith'
   - list the prerequisite of the 'Database' course
 - What is the difference between controlled and uncontrolled redundancy? Illustrate with examples.
-  - the DBMS approach allows the control of redundancy (in storing the same data multiple times)
-  - 
+  - in the database approach, there is a controlled amount of redundancy (in defining and storing data in wasted storage), which means that too much redundancy is not good and too little redundancy is not good either
+  - example of good redundancy: we may store `Student_name` and `Course_number` redundantly in a `GRADE_REPORT` , because whenever we retrieve a `GRADE_REPORT` record, we want to retrieve the student name and course number along with the grade, student number, and section identifier. By placing all the data together, we don't have to seach multiple files to colect this data, which improves the queries
+  - example of bad redundancy: every user group maintains their own file - the accounting office keeps data on registration and related billing information, while the registration office keeps track of student courses and grades (file processing approach). This leads to _duplication of effort_ (modifying data multiple times), _storage space is wasted_ when the dame data is stored repeatedly, and the data may become _inconsistent_
 - Specify all the relationships among the records of the database shown in Figure 1.2.
+
+| The record _ | in table _ is related to | _ records | in           |
+|--------------|--------------------------|-----------|--------------|
+| Smith        | STUDENT                  | 2         | GRADE REPORT |
+| Brown        | STUDENT                  | 4         | GRADE REPORT |
+| 17           | GRADE_REPORT             | 2         | SECTION      |
+| 8            | GRADE_REPORT             | 4         | SECTION      |
+| CS3380       | PREREQUISITE             | 2         | COURSE       |
+| CS3320       | PREREQUISITE             | 2         | COURSE       |
+| 85           | SECTION                  | 1         | COURSE       |
+| 92           | SECTION                  | 1         | COURSE       |
+
 - Give some additional views that may be needed by other user groups for the database shown in Figure 1.2.
+  - students use the database to search for their course and grades information
+  - teachers use the database to search for their students' and classes' information
 - Cite some examples of integrity constraints that you think can apply to the database shown in Figure 1.2.
+
+| TYPE                  | CONSTRAINT                                                                                         |
+|-----------------------|----------------------------------------------------------------------------------------------------|
+| the simplest type     | the value of Name must be a string of no more than 30 alphabetic characters                        |
+| the simplest type     | the value of Grade must be an uppercase character, and can only take on value {A, B, C, D, F or I} |
+| referential integrity | every section record must be related to a course record                                            |
+| referential integrity | every GRADE_REPORT record must be related to a STUDENT record                                      |
+| uniqueness constraint | every course record must have a unique value for course number                                     |
+| uniqueness constraint | every student must have a unique value for Student_number                                          |
+
 - Give examples of systems in which it may make sense to use traditional file processing instead of a database approach.
+  - when the overhead cost is too high
+  - when there are real-time requirements for some application programs that may not bt met because of DBMS overhead
+  - when there is no multiple-user access to data
 - Consider Figure 1.2:
   1. If the name of the ‘CS’ (Computer Science) Department changes to ‘CSSE’ (Computer Science and Software Engineering) Department and the corresponding prefix for the course number also changes, identify the columns in the database that would need to be updated
-  2. Can you restructure the columns in the COURSE, SECTION, and PREREQUISITE tables so that only one column will need to be updated?
+    - column `Course_number` of the `COURSE`, `PREREQUISITE` and `SECTION` table, and column `Prerequisite_number` of `PREREQUISITE` table
+  3. Can you restructure the columns in the COURSE, SECTION, and PREREQUISITE tables so that only one column will need to be updated?
+    - we can change from using `Course_numer` to `Course_name`, which would not change when the `Department`'s name change
 
 ### Linkies 
 
@@ -245,3 +275,4 @@ achieve their complex requirements
 - [ ] what is _program objects_? (pg 48 of the book)
 - [ ] what does _semantic of the data_ means?
 - [ ] explore the career path of database systems? What skills are required? Is it a hot career path in Viet Nam?
+- [ ] Specify all the relationships among the records of the database shown in Figure 1.2.
